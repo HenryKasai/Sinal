@@ -9,26 +9,31 @@ namespace Sinal
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Insira um número inteiro.");
 
-            int número = Convert.ToInt32(Console.ReadLine()); 
+            int númeroint;
+            string número = Console.ReadLine(); 
+            bool letra = Int32.TryParse(número, out númeroint);
             Console.ForegroundColor = ConsoleColor.Green;
-
-            if (número < 0) 
+            if (!letra)
             {
-                Console.WriteLine($"O número {número} é negativo");
-            }
-            else if (número == 0)
-            {
-                Console.WriteLine($"O número {número} é zero");
-            }
-            else if (número > 0)
-            {
-                Console.WriteLine($"O número {número} é positivo.");
-            }
-            else 
-            {
-                Console.WriteLine("número invalido.");
-            }
+                Console.WriteLine($"O valor {número} não é válido.");
+            }    
+                else if (númeroint > 0)
+                {
+                    Console.WriteLine($"O número {número} é positivo.");
+                }
+                else if (númeroint == 0)
+                {
+                    Console.WriteLine($"O número {número} é zero.");
+                }
+                else if (númeroint < 0)
+                {
+                    Console.WriteLine($"O número {número} é negativo");
+                }
             Console.ForegroundColor = ConsoleColor.Gray;
+            
+
+
+            
 
 
         }
