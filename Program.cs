@@ -30,6 +30,7 @@ namespace Sinal
                     Console.WriteLine($"O número {número} é negativo");
                 }
             Console.ForegroundColor = ConsoleColor.Gray;
+            Console.ReadKey();
             
 
 
