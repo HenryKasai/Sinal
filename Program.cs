@@ -16,8 +16,12 @@ namespace Sinal
             if (!letra)
             {
                 Console.WriteLine($"O valor {número} não é válido.");
-            }    
-                else if (númeroint > 0)
+                Console.ResetColor();
+                Environment.Exit(-1);
+            }
+            else
+            {  
+                if (númeroint > 0)
                 {
                     Console.WriteLine($"O número {número} é positivo.");
                 }
@@ -29,7 +33,8 @@ namespace Sinal
                 {
                     Console.WriteLine($"O número {número} é negativo");
                 }
-            Console.ForegroundColor = ConsoleColor.Gray;
+            }
+            Console.ResetColor();
             Console.ReadKey();
             
 
