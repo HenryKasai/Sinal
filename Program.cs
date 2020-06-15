@@ -18,10 +18,8 @@ namespace Sinal
                 Console.WriteLine($"O valor {número} não é válido.");
                 Console.ResetColor();
                 Environment.Exit(-1);
-            }
-            else
-            {  
-                if (númeroint > 0)
+            }  
+                else if (númeroint > 0)
                 {
                     Console.WriteLine($"O número {número} é positivo.");
                 }
@@ -33,7 +31,6 @@ namespace Sinal
                 {
                     Console.WriteLine($"O número {número} é negativo");
                 }
-            }
             Console.ResetColor();
             Console.ReadKey();
             
